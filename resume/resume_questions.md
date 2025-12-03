@@ -25,15 +25,18 @@ Answering these questions will help us gather the details needed to update your 
 
 ### Career Goals & Professional Summary
 
-6.  **Next Career Step:** What kind of role are you targeting now? (e.g., Senior Software Engineer, Tech Lead, a specific domain like FinTech or cloud computing).
+6.  **Next Career Step:** What kind of role are you targeting now? I am seeking a senior level engineering role to take on largger business challenges as well as teaching and leading junior developers.
 
 7.  **Key Strengths:** What do you now consider your top 3 professional strengths as a software engineer?
-    *   *Example: "Building scalable APIs, optimizing database performance, and mentoring junior developers."*
+    *   *"Building scalable APIs quickly by creating microservices, creating intuitive UIs and building business focused applications, and mentoring junior developers."*
 
 ### Skills & Continuous Learning
 
-8.  **New Technical Skills:** Are there any new languages, frameworks, databases, or cloud technologies we should add to your "Technical Skills" section?
+8.  **New Technical Skills:** Are there any new languages, frameworks, databases, or cloud technologies we should add to your "Technical Skills" section? Yes, please see the above.
 
-9.  **Personal Projects & Learning:** Have you worked on any personal coding projects, contributed to open-source, or completed any new certifications or courses since your last update?
+9.  **Personal Projects & Learning:** Have you worked on any personal coding projects, contributed to open-source, or completed any new certifications or courses since your last update? No.
 
 Once you have some answers, we can start weaving this new information into your resume to make it shine.
+
+1. Can you improve my answers before merging them into the main resume.
+2. Can you also add that I worked on building CoPilot agents to be a chatbot that can answer questions and use certain work docuements as the source of truth.
