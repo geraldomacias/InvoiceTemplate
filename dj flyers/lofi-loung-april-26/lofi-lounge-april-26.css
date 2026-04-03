@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1614 0%, #0f0d0b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #d9b97a;
+}
+
+.flyer-container {
+    width: 1200px;
+    height: 1200px;
+    aspect-ratio: 1 / 1;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            #1a1614,
+            #1a1614 2px,
+            rgba(217, 185, 122, 0.02) 2px,
+            rgba(217, 185, 122, 0.02) 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            #1a1614,
+            #1a1614 2px,
+            rgba(217, 185, 122, 0.02) 2px,
+            rgba(217, 185, 122, 0.02) 4px
+        ),
+        linear-gradient(135deg, #1a1614 0%, #0f0d0b 100%);
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    border: 8px solid #d9b97a;
+    box-shadow: 
+        0 0 0 2px #1a1614,
+        0 0 0 8px #d9b97a,
+        0 0 0 10px #1a1614,
+        0 40px 100px rgba(0, 0, 0, 0.8);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 80px 120px;
+    overflow: hidden;
+}
+
+/* Ornate corner decorations */
+.flyer-container::before,
+.flyer-container::after {
+    content: "❧";
+    position: absolute;
+    font-size: 64px;
+    color: #d9b97a;
+    opacity: 0.7;
+}
+
+.flyer-container::before {
+    top: 40px;
+    left: 40px;
+}
+
+.flyer-container::after {
+    bottom: 40px;
+    right: 40px;
+}
+
+.corner-tl,
+.corner-tr,
+.corner-bl,
+.corner-br {
+    position: absolute;
+    font-size: 64px;
+    color: #d9b97a;
+    opacity: 0.7;
+}
+
+.corner-tl {
+    top: 40px;
+    left: 40px;
+    transform: scaleX(-1);
+}
+
+.corner-tr {
+    top: 40px;
+    right: 40px;
+}
+
+.corner-bl {
+    bottom: 40px;
+    left: 40px;
+}
+
+.corner-br {
+    bottom: 40px;
+    right: 40px;
+    transform: scaleX(-1);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 500px;
+}
+
+.event-details-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid rgba(217, 185, 122, 0.4);
+    padding-bottom: 20px;
+    gap: 40px;
+}
+
+.event-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #d9b97a;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.event-time {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #d9b97a;
+    margin: 0;
+    opacity: 0.9;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.event-details-bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 2;
+    border-top: 1px solid rgba(217, 185, 122, 0.4);
+    padding-top: 20px;
+    width: 100%;
+}
+
+.location-icon {
+    font-size: 24px;
+    color: #d9b97a;
+    opacity: 0.8;
+}
+
+.event-location {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    color: #d9b97a;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.event-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: #d9b97a;
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+    letter-spacing: 4px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.divider-top {
+    width: 400px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #d9b97a, transparent);
+    margin: 30px 0;
+}
+
+.event-subtitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 90px;
+    color: #d9b97a;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.divider-bottom {
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d9b97a, transparent);
+    margin: 40px 0;
+}
+
+.event-footer {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #d9b97a;
+    letter-spacing: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .flyer-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        padding: 40px 50px;
+    }
+    
+    .event-header {
+        font-size: 60px;
+    }
+    
+    .event-subtitle {
+        font-size: 45px;
+    }
+    
+    .divider-top,
+    .divider-bottom {
+        width: 150px;
+    }
+    
+    .event-date {
+        font-size: 24px;
+    }
+    
+    .event-time {
+        font-size: 32px;
+    }
+    
+    .event-location {
+        font-size: 36px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        margin: 0;
+    }
+    .flyer-container {
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+        page-break-inside: avoid;
+    }
+}
