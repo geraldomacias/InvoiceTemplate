@@ -1,0 +1,262 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --gold: #C49A2A;
+    --gold-light: #E8C96A;
+    --purple: #1A1140;
+    --purple-mid: #2D1F6B;
+    --ink: #1C1C1E;
+    --ink-soft: #3A3A3C;
+    --muted: #6E6E73;
+    --rule: #D8D2C4;
+    --bg: #FAF8F4;
+    --left-bg: #1A1140;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #E8E4DC;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 32px 16px;
+    color: var(--ink);
+}
+
+.resume-container {
+    width: 900px;
+    background: var(--bg);
+    box-shadow: 0 8px 48px rgba(26,17,64,0.18);
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    background: var(--left-bg);
+    padding: 24px 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 2px solid rgba(196,154,42,0.18);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: 30%;
+    width: 340px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.header h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.header h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.contact-info {
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    align-items: center;
+}
+
+.contact-info a {
+    color: var(--gold-light);
+    text-decoration: none;
+}
+
+.contact-info .bull {
+    color: var(--gold);
+    opacity: 0.5;
+}
+
+/* BODY LAYOUT */
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+/* LEFT COLUMN */
+.left-column {
+    width: 280px;
+    flex-shrink: 0;
+    background: #F2EEE6;
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+}
+
+/* RIGHT COLUMN */
+.right-column {
+    flex: 1;
+    padding: 26px;
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+/* SUMMARY */
+.left-column p {
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+}
+
+/* SKILLS */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.skills-list div {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+}
+
+.skills-list strong {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--purple-mid);
+    text-transform: uppercase;
+    margin-bottom: 1px;
+}
+
+/* EDUCATION */
+.edu-degree {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.4;
+}
+
+.edu-school {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* JOBS */
+.job {
+    margin-bottom: 18px;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.job-header h4 {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.job-header span {
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.job-subheader {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.job ul {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.job ul li {
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+}
+
+/* SLIM JOBS (no bullets) */
+.job-slim .job-header h4 {
+    font-size: 14px;
+}
+
+@media print {
+    body { 
+        background: white; 
+        padding: 0;
+        margin: 0;
+        min-height: auto;
+        display: block;
+        width: 100%;
+        align-items: auto;
+        justify-content: auto;
+    }
+    .resume-container { 
+        box-shadow: none; 
+        width: 100%;
+        margin: 0;
+        page-break-after: avoid;
+    }
+    .header { 
+        page-break-after: avoid;
+        margin: 0;
+    }
+    .main-content { 
+        page-break-inside: avoid;
+        margin: 0;
+    }
+}
